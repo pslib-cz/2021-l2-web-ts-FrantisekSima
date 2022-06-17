@@ -1,0 +1,529 @@
+/*hlavička*/
+@media only screen and (min-width: 1100px) {
+    
+
+html {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*navigace*/
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: url(../photo/21_sima_blur.jpg);
+    background-position: center;
+    background-size: 100% auto ;
+    background-repeat: no-repeat;
+    height: 70vh;
+    position: relative;
+}
+
+    .nav__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.705);
+        width: 100%;
+        height: 5em;
+        align-items: center ;
+    }
+        .nav__navigace {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 25em;
+            font-size: xx-large;
+            text-decoration: none;
+            color: white;
+        }
+
+            .nav__navigace a {
+                text-decoration: none;
+                color: white;
+            }
+
+        .nav__titel {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 0; 
+            right: 0;
+            
+        }
+
+            .nav__titel--main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+                .nav__titel--main::after {
+                    content: "";
+                    width: 8em;
+                    height: 4px;
+                    background-color: white;
+                    border: hidden;
+                    margin-top: 0.75em;
+                }
+
+            .nav__titel--bottom {   
+                display: flex;
+                flex-direction: row;
+                gap: 1em;
+            }
+
+/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*sekce 1 "Série fotek"*/
+.series {
+    text-align: center;
+    margin-top: 5em;
+}
+
+    .series__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+        .series__header::after {
+            content: "";
+            width: 8em;
+            height: 4px;
+            background-color: white;
+            border: hidden;
+            margin-top: 0.75em;
+        }
+
+
+    .series__photo--wraper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+        .series__photo--wraper figure {
+            height: var(--height);
+            width: var(--width);
+            min-width: var(--width);
+                                                                
+            /*    flex-basis: calc(100% / 4 - 2*2px ); */
+        }
+
+        .series__photo--wraper img {
+            width: 100%;
+            height: 100%;
+            border: solid black;
+            border-radius: 3em;
+            object-fit: cover;
+            flex-basis: 300px;
+        }
+
+        .series__photo--wraper {
+            --height: 18em;
+            --width: 18em
+        }
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+                           
+/*sekce 2. "Témata"*/
+
+.textsize {
+    font-size: 1.5rem;
+    line-height: 40px;
+    margin: 0;
+}
+
+.themes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    gap: 7em;
+}
+
+    .themes__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .themes__header::after {
+            content: "";
+            width: 8em;
+            height: 4px;
+            background-color: white;
+            border: hidden;
+            margin-top: 0.75em;
+        }
+
+/*Téma: Svět bez barev*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/
+
+    .themes__bw {
+        display: flex;
+        background-color: #4E4E4E;
+        max-width: 80em;
+        max-height: 30em;
+        border: solid 1px black;
+        border-radius: 3em;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+        .themes__bw::after {
+            content: "";
+            width: 4px;
+            height: 20em;
+            background-color: white;
+            border: hidden;
+            margin-top: 0.75em;
+            order: 2;
+        }
+
+        .themes__bw figure {
+            height: 22em;
+            max-width: 33em;
+            min-width: 18;
+            width: 30em;
+            flex-shrink: 0;
+            min-width: var(--width);
+            order: 1;
+        }
+
+            .themes__bw img {
+                width: 100%;
+                height: 100%;
+                border: hidden black;
+                border-radius: 3em;
+                object-fit: cover;
+
+            }
+
+        .themes__bw--article {
+            max-width: 35em;
+            margin-bottom: 2em;
+            order: 3;
+            margin-left: 2em;
+        }
+
+        .themes__bw--header {
+            display: flex;
+            flex-direction: column;
+            
+            margin: 0;
+        }
+
+            .themes__bw--header::after {
+                content: "";
+                width: 6em;
+                height: 4px;
+                background-color:white;
+                border: hidden;
+                margin-top: 0.5em;
+            }
+
+/*Téma: Stav bez tíže*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/
+
+    .themes__gravity {
+        display: flex;
+        background-color: #4E4E4E;
+        max-width: 80em;
+        max-height: 30em;
+        border: solid 1px black;
+        border-radius: 3em;
+        justify-content: space-evenly;
+        align-items: center;
+        
+    }
+
+        .themes__gravity::after {
+            content: "";
+            width: 4px;
+            height: 20em;
+            background-color: white;
+            border: hidden;
+            margin-top: 0.75em;
+            order: 2;
+        }
+
+        .themes__gravity figure {
+            height: 22em;
+            width: 33em;
+            min-width: 60em;
+            flex-shrink: 0;
+            min-width: var(--width);
+            order: 3;
+        }
+
+            .themes__gravity img {
+                width: 100%;
+                height: 100%;
+                border: hidden black;
+                border-radius: 3em;
+                object-fit: cover;
+            }
+
+        .themes__gravity--article {
+            max-width: 35em;
+            margin-bottom: 2em;
+            order: 1;
+            margin-left: 3em;
+        }
+
+        .themes__gravity--header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+        }
+
+            .themes__gravity--header::after {
+                content: "";
+                width: 10em;
+                height: 4px;
+                background-color: white;
+                border: hidden;
+                margin-top: 0.5em;
+            }
+
+/*Téma: Časy minulé*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/            /*------------*/                       /*------------*/
+
+    .themes__time {
+        display: flex;
+        background-color: #4E4E4E;
+        max-width: 80em;
+        max-height: 30em;
+        border: solid 1px black;
+        border-radius: 3em;
+        justify-content: space-evenly;
+        align-items: center;
+       
+    }
+
+        .themes__time::after {
+            content: "";
+            width: 4px;
+            height: 20em;
+            background-color: white;
+            border: hidden;
+            margin-top: 0.75em;
+            order: 2;
+        }
+
+        .themes__time figure {
+            height: 22em;
+            width: 33em;
+            min-width: 600px;
+            flex-shrink: 0;
+            min-width: var(--width);
+            order: 1;
+        }
+
+            .themes__time img {
+                width: 100%;
+                height: 100%;
+                border: hidden black;
+                border-radius: 3em;
+                object-fit: cover;
+            }
+
+        .themes__time--article {
+            max-width: 35em;
+            margin-bottom: 2em;
+            order: 3;
+            margin-left: 2em;
+        }
+
+        .themes__time--header {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1em;
+        }
+
+            .themes__time--header::after {
+                content: "";
+                width: 10em;
+                height: 4px;
+                background-color: white;
+                border: hidden;
+                margin-top: 0.5em;
+            }
+
+/*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.bestoff {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .bestoff__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+        .bestoff__header::after {
+            content: "";
+            width: 10em;
+            height: 4px;
+            background-color: white;
+            border: hidden;
+            margin-top: 0.75em;
+        }
+
+    .bestoff__artickle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+        .bestoff__photo {
+            max-width: 90em;
+            max-height: 60em;
+        }
+
+            .bestoff__artickle img {
+                border: black solid 1px;
+                border-radius: 3em;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        .bestoff__text {
+            text-align: center;
+            width: 25em;
+            order: 1;
+        }
+
+            .bestoff__artickle::after {
+                content: "";
+                width: 15em;
+                height: 4px; 
+                background-color: white;
+                border: hidden;
+                margin: 2em 0 2em 0;
+                order: 0;
+            }
+
+            .bestoff__artickle::before {
+                content: "";
+                width: 15em;
+                height: 4px; 
+                background-color: white;
+                border: hidden;
+                margin: 2em 0 2em 0;
+                order: 2;
+            }
+
+
+/*----------------------------------------------------------------------------------------------------------*/            
+
+/*Galerie*/
+
+.galery {
+    text-align: center;
+    margin-top: 5em;
+}
+
+    .galery__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+        .galery__header::after {
+            content: "";
+            width: 10em;
+            height: 4px;
+            background-color: white;
+            border: hidden;
+            margin-top: 0.75em;
+        }
+
+
+    .galery__photo--wraper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex-shrink: 0;
+        justify-content: center;
+        text-align: center;
+    }
+
+        .galery__photo--wraper figure {
+            height: var(--height);
+            width: var(--width);
+            min-width: var(--width);
+            margin-bottom: 3em;
+                                                                
+            /*    flex-basis: calc(100% / 4 - 2*2px ); */
+        }
+
+        .galery__photo--wraper img {
+            width: 100%;
+            height: 100%;
+            border: solid black;
+            border-radius: 3em;
+            object-fit: cover;
+            flex-basis: 300px;
+        }
+
+        .galery__photo--wraper {
+            --height: 18em;
+            --width: 18em
+        }
+            
+            
+    }       
+    footer {
+        background-color: #4E4E4E;
+        padding: 2em;
+        color: white;
+        margin: 0;
+    }
+
+    footer a {
+        color: white;
+        text-decoration: underline white;
+    }
+
+    .copyright {
+        margin-top: 2em;
+        margin-right: 0;
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
